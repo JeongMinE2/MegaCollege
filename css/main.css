@@ -24,23 +24,79 @@ header {
 }
 
 /* 로그아웃 */
-#header_h .logout {
+#logout {
     float: right;
     margin: 17px 30px;
     border-radius: 5px;
     background-color: #000;
 }
 
-#header_h .logout:hover {
-    cursor: pointer;
-}
-
-#header_h .logout p {
+#logout p {
     padding: 10px;
     font-size: 15px;
     font-weight: bold;
     color: #fff;
 }
+
+/* 로그아웃 박스 */
+#logout_box {
+    width: 625px;
+    height: 290px;
+    top: 400px;
+    left: 400px;
+    background-color: #fff;
+    border-radius: 20px;
+    position: absolute;
+    z-index: 9999;
+    box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
+}
+
+#logout_box .logout_box_text {
+    margin: 40px;
+}
+
+#logout_box .logout_box_text h3 {
+    margin-bottom: 10px;
+}
+
+#logout_box .logout_box_text h2 {
+    margin-bottom: 10px;
+}
+
+#logout_box .logout_box_text p {
+    color: gray;
+}
+
+#logout_box .logout_box_check {
+    margin: auto;
+    width: 400px;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#logout_box .logout_box_check a {
+    width: 180px;
+    height: 65px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+#logout_box .logout_box_check p {
+    margin-top: 20px;
+}
+
+#logout_box .logout_box_check .ok {
+    color: #fff;
+    background-color: #000;
+}
+
+#logout_box .logout_box_check .cancel {
+    color: #000;
+}
+
+
 
 /* OOO님 안녕하세요! */
 #header_b {
