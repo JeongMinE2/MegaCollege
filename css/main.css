@@ -5,7 +5,6 @@ body {
 }
 
 
-
 /* 헤더 */
 header {
     width: 1440px;
@@ -28,18 +27,18 @@ header {
 #logout {
     float: right;
     margin: 15px 30px;
+    padding: 10px;
+    font-size: 15px;
+    color: #fff;
     border-radius: 5px;
     background-color: #000;
 }
 
-#logout p {
-    padding: 10px;
-    font-size: 15px;
-    font-weight: bold;
-    color: #fff;
+#logout:hover {
+    cursor: pointer;
 }
 
-/* 로그아웃 박스 */
+/* 로그아웃 박스 생성 */
 #logout_box {
     width: 625px;
     height: 290px;
@@ -50,10 +49,12 @@ header {
     border-radius: 20px;
     background-color: #fff;
     box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
+    display: none;
 }
 
+/* 로그아웃 박스 내부 */
 #logout_box .logout_box_text {
-    margin: 40px;
+    margin: 50px 60px;
 }
 
 #logout_box .logout_box_text h3, h2 {
@@ -61,34 +62,35 @@ header {
 }
 
 #logout_box .logout_box_text p {
-    color: gray;
+    color: #bdbdbd;
 }
 
+/* 확인, 취소 버튼 */
 #logout_box .logout_box_check {
     margin: auto;
-    width: 400px;
+    width: 370px;
     height: 70px;
     display: flex;
     justify-content: space-between;
 }
 
-#logout_box .logout_box_check a {
-    width: 180px;
-    height: 65px;
+#logout_box .logout_box_check p {
+    padding-top: 20px;
+    width: 170px;
+    height: 40px;
     text-align: center;
     border-radius: 5px;
     border: 1px solid #000;
 }
 
-#logout_box .logout_box_check p {
-    margin-top: 20px;
+#logout_box .logout_box_check p:hover {
+    cursor: pointer;
 }
 
 #logout_box .logout_box_check .ok {
     color: #fff;
     background-color: #000;
 }
-
 
 
 /* OOO님 안녕하세요! */
@@ -98,10 +100,11 @@ header {
 }
 
 #header_b .header_in {
-    margin: 20px 50px;
+    margin-left: 50px;
+    line-height: 75px;
     font-size: 25px;
+    font-weight: 500;
 }
-
 
 
 /* 메인 */
@@ -112,14 +115,13 @@ header {
     box-shadow: 0 5px 10px -5px gray inset;
 }
 
-/* 프로필 박스 생성 */
 #profile {
     padding-top: 50px;
     width: 100%;
     height: 215px;
 }
 
-/* 프로필 내부 */
+/* 프로필 박스 생성 */
 #profile_in {
     margin: auto;
     width: 1300px;
@@ -128,6 +130,7 @@ header {
     box-shadow: 0 5px 10px -3px gray;
 }
 
+/* 프로필 내부 */
 #profile img {
     float: left;
     margin: 30px;
@@ -136,75 +139,69 @@ header {
     border-radius: 50%;
 }
 
-#profile_in .info {
+#info {
     float: right;
     width: 1080px;
     height: 215px;
 }
 
-#profile_in .info .infoMain {
+#info .info_main {
     float: left;
     width: 180px;
     height: 215px;
 }
 
-#profile_in .info .infoMain>li {
+#info .info_main>li {
     margin-top: 25px;
     font-size: 20px;
-    font-weight: bold;
     display: flex;
     align-items: center;
 }
 
-#profile_in .info .infoMain>li:nth-child(1) {
+#info .info_main>li:nth-child(1) {
     margin-top: 35px;
     font-size: 25px;
-    font-weight: bold;
 }
 
-#profile_in .info .infoMain>li span {
+#info .info_main>li span {
     padding: 15px 0 0;
     margin-left: 10px;
     font-size: 13px;
-    font-weight: bold;
     color: gray;
 }
 
-#profile_in .info .infoTitle {
+#info .info_title {
     margin-top: 40px;
     float: right;
     width: 900px;
     display: flex;
 }
 
-#profile_in .info .infoTitle>li {
+#info .info_title>li {
     width: 150px;
     font-size: 18px;
-    font-weight: bold;
 }
 
-#profile_in .info .infoTitle>li:last-child {
+#info .info_title>li:last-child {
     width: 590px;
 }
 
-#profile_in .info .infoText {
+#info .info_text {
     float: right;
     width: 900px;
     display: flex;
 }
 
-#profile_in .info .infoText>li {
+#info .info_text>li {
     margin-top: 5px;
     width: 150px;
     font-size: 13px;
     color: gray;
-    font-weight: bold;
 }
 
-#profile_in .info .infoText>li:last-child {
+#info .info_text>li:last-child {
     width: 590px;
 }
-
 
 
 /* 아래 왼쪽 섹션 */
@@ -245,13 +242,75 @@ header {
     cursor: pointer;
 }
 
+/* 수강 과목 생성 박스 */
+#create_subject_box {
+    width: 625px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
+    display: none;
+}
+
+#create_subject_box .create_subject_box_text {
+    margin: 50px;
+}
+
+#create_subject_box .create_subject_box_text h3, h2 {
+    margin-bottom: 10px;
+}
+
+#create_subject_box .create_subject_box_text p {
+    color: #bdbdbd;
+}
+
+#create_subject_box .create_subject_box_text input {
+    padding: 10px;
+    margin-top: 30px;
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #f1f1f1;
+}
+
+#create_subject_box .create_subject_box_check {
+    margin: auto;
+    width: 180px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#create_subject_box .create_subject_box_check p {
+    width: 80px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+#create_subject_box .create_subject_box_check p:hover {
+    cursor: pointer;
+}
+
+#create_subject_box .create_subject_box_check .create {
+    color: #fff;
+    background-color: #000;
+}
+
+/* 수강 과목 리스트 */
 #subject .subject_b {
     margin: auto;
     width: 780px;
     height: 400px;
 }
 
-/* 수강 과목 리스트 */
 #subject .subject_b ul {
     display: flex;
 }
@@ -259,10 +318,9 @@ header {
 /* 과목명 */
 #subject .subject_b li {
     font-size: 18px;
-    font-weight: bold;
-    padding: 5px 0;
     width: 250px;
-    height: 25px;
+    height: 35px;
+    line-height: 35px;
     text-align: center;
     border-bottom: 1px solid rgb(220, 220, 220);
 }
@@ -279,14 +337,13 @@ header {
 
 /* 전공/교양 */
 #subject .subject_b li:nth-child(4) {
-    width: 170px;
+    width: 180px;
 }
 
 /* 설정 */
 #subject .subject_b li:last-child {
-    width: 100px;
+    width: 90px;
 }
-
 
 
 /* 아래 오른쪽 섹션 */
@@ -319,7 +376,7 @@ header {
 /* 학점표 */
 #credit .credit_b {
     margin: auto;
-    width: 330px;
+    width: 360px;
     height: 80px;
 }
 
@@ -330,12 +387,11 @@ header {
 }
 
 #credit .credit_b li {
-    width: 110px;
-    height: 30px;
-    padding: 5px 0;
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
     border-bottom: 1px solid rgb(220, 220, 220);
 }
-
 
 
 /* 시간표 박스 생성 */
@@ -385,5 +441,4 @@ header {
 
 #timetable .timetable_b ul li p {
     font-size: 14px;
-    font-weight: bold;
 }

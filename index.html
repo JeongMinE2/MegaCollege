@@ -10,6 +10,8 @@
     * {
         margin: 0;
         padding: 0;
+        font-weight: bold;
+        border: 0px;
     }
 
     img {
@@ -31,24 +33,25 @@
     <header>
         <div id="header_h">
             <a href=""><h1>메가대학교</h1></a>
-            <a href="" id="logout">
-                <p>로그아웃</p>
-            </a>
-            <div id="logout_box" style="display: none;">
+            <p  id="logout">로그아웃</p>
+
+            <!-- 로그아웃 박스 -->
+            <div id="logout_box">
                 <div class="logout_box_text">
                     <h3>메가대학교</h3>
                     <h2>로그아웃</h2>
                     <p>로그아웃 하시겠습니까?</p>
                 </div>
                 <div class="logout_box_check">
-                    <a href="" class="ok"><p>확인</p></a>
-                    <a href="" class="cancel"><p>취소</p></a>
+                    <p class="ok">확인</p>
+                    <p class="cancel">취소</p>
                 </div>
             </div>
         </div>
+
         <div id="header_b">
             <div class="header_in">
-                <span style="font-weight: bold;">정민이 </span>님 안녕하세요!
+                <span>정민이 </span>님 안녕하세요!
             </div>
         </div>
     </header>
@@ -58,28 +61,28 @@
         <div id="profile">
             <div id="profile_in">
                 <img src="/images/20230720_202927.jpg" alt="">
-                <div class="info">
-                    <ul class="infoMain">
+                <div id="info">
+                    <ul class="info_main">
                         <li>정민이<span>학생</span></li>
                         <li>정보보호학과</li>
                         <li>0.00 / 4.5</li>
                     </ul>
-                    <ul class="infoTitle">
+                    <ul class="info_title">
                         <li>학번</li>
                         <li>생년월일</li>
                         <li>나이</li>
                     </ul>
-                    <ul class="infoText">
+                    <ul class="info_text">
                         <li><p>16110133</p></li>
                         <li><p>1997.04.03</p></li>
                         <li><p>만 26세</p></li>
                     </ul>
-                    <ul class="infoTitle">
+                    <ul class="info_title">
                         <li>지도교수</li>
                         <li>재적상태</li>
                         <li>주소</li>
                     </ul>
-                    <ul class="infoText">
+                    <ul class="info_text">
                         <li><p>정민이 교수</p></li>
                         <li><p>졸업</p></li>
                         <li><p>부산광역시 사상구 모라동 불주먹</p></li>
@@ -93,7 +96,24 @@
             <section id="subject">
                 <div class="subject_h">
                     <h2>수강 과목</h2>
-                    <p>+</p>
+                    <p id="plus">+</p>
+                </div>
+
+                <!-- 수강 과목 생성 박스 -->
+                <div id="create_subject_box">
+                    <div class="create_subject_box_text">
+                        <h3>메가대학교</h3>
+                        <h2>수강 과목 생성</h2>
+                        <p>수강 과목 정보를 입력해주세요.</p>
+                        <input type="text" placeholder="교과목명">
+                        <input type="text" placeholder="담당 교수">
+                        <input type="text" placeholder="학점">
+                        <input type="text" placeholder="전공 / 교양">
+                    </div>
+                    <div class="create_subject_box_check">
+                        <p class="create">생성</p>
+                        <p class="cancel">취소</p>
+                    </div>
                 </div>
                 <div class="subject_b">
                     <ul>
