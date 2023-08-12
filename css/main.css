@@ -1,4 +1,5 @@
 body {
+    margin: auto;
     width: 1440px;
     height: 1020px;
 }
@@ -20,13 +21,13 @@ header {
 
 #header_h h1 {
     float: left;
-    margin: 16px 48px;
+    margin: 15px 50px;
 }
 
 /* 로그아웃 */
 #logout {
     float: right;
-    margin: 17px 30px;
+    margin: 15px 30px;
     border-radius: 5px;
     background-color: #000;
 }
@@ -42,12 +43,12 @@ header {
 #logout_box {
     width: 625px;
     height: 290px;
-    top: 400px;
-    left: 400px;
-    background-color: #fff;
-    border-radius: 20px;
     position: absolute;
-    z-index: 9999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    background-color: #fff;
     box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
 }
 
@@ -55,11 +56,7 @@ header {
     margin: 40px;
 }
 
-#logout_box .logout_box_text h3 {
-    margin-bottom: 10px;
-}
-
-#logout_box .logout_box_text h2 {
+#logout_box .logout_box_text h3, h2 {
     margin-bottom: 10px;
 }
 
@@ -72,7 +69,7 @@ header {
     width: 400px;
     height: 70px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #logout_box .logout_box_check a {
@@ -92,10 +89,6 @@ header {
     background-color: #000;
 }
 
-#logout_box .logout_box_check .cancel {
-    color: #000;
-}
-
 
 
 /* OOO님 안녕하세요! */
@@ -105,12 +98,7 @@ header {
 }
 
 #header_b .header_in {
-    float: left;
-    margin: 22px 48px;
-}
-
-#header_b span {
-    line-height: 33px;
+    margin: 20px 50px;
     font-size: 25px;
 }
 
@@ -124,12 +112,14 @@ header {
     box-shadow: 0 5px 10px -5px gray inset;
 }
 
+/* 프로필 박스 생성 */
 #profile {
     padding-top: 50px;
     width: 100%;
     height: 215px;
 }
 
+/* 프로필 내부 */
 #profile_in {
     margin: auto;
     width: 1300px;
@@ -144,58 +134,75 @@ header {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    
 }
 
 #profile_in .info {
     float: right;
-    width: 1090px;
+    width: 1080px;
     height: 215px;
 }
 
-#profile_in .info .info_main {
+#profile_in .info .infoMain {
     float: left;
-    margin-top: 30px;
     width: 180px;
-    height: 185px;
+    height: 215px;
 }
 
-#profile_in .info .info_main h1 {
-    display: inline;
+#profile_in .info .infoMain>li {
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
-#profile_in .info .info_main span {
-    font-size: 18px;
-    color: gray;
+#profile_in .info .infoMain>li:nth-child(1) {
+    margin-top: 35px;
+    font-size: 25px;
     font-weight: bold;
 }
 
-#profile_in .info .info_main p {
-    margin-top: 15px;
-    font-size: 27px;
-    font-weight: 800;
+#profile_in .info .infoMain>li span {
+    padding: 15px 0 0;
+    margin-left: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: gray;
 }
 
-#profile_in .info .info_sub {
-    float: left;
-    margin-top: 30px;
+#profile_in .info .infoTitle {
+    margin-top: 40px;
+    float: right;
+    width: 900px;
+    display: flex;
+}
+
+#profile_in .info .infoTitle>li {
     width: 150px;
-    height: 185px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-#profile_in .info .info_sub h3 {
-    font-size: 22px;
-    margin-top: 10px
+#profile_in .info .infoTitle>li:last-child {
+    width: 590px;
 }
 
-#profile_in .info .info_sub p {
-    margin-top: 10px;
+#profile_in .info .infoText {
+    float: right;
+    width: 900px;
+    display: flex;
+}
+
+#profile_in .info .infoText>li {
+    margin-top: 5px;
+    width: 150px;
+    font-size: 13px;
     color: gray;
     font-weight: bold;
 }
 
-#profile_in .info .info_sub:last-child {
-    width: 350px;
+#profile_in .info .infoText>li:last-child {
+    width: 590px;
 }
 
 
@@ -207,31 +214,30 @@ header {
     height: 605px;
 }
 
-
-
-/* 수강 과목 */
+/* 수강 과목 박스 생성*/
 #subject {
     float: right;
     margin-top: 50px;
     width: 840px;
-    height: 514px;
+    height: 515px;
     border-radius: 20px;
     box-shadow: 0 5px 10px -3px gray;
 }
 
+/* 수강 과목 내부 */
 #subject .subject_h {
-    margin: 40px auto 0;
-    width: 780px;
-    height: 60px;
+    width: 840px;
+    height: 100px;
 }
 
 #subject .subject_h h2 {
     float: left;
+    margin: 30px 30px;
 }
 
 #subject .subject_h p {
     float: right;
-    margin-top: -20px;
+    margin: 0 30px;
     font-size: 50px;
 }
 
@@ -245,68 +251,40 @@ header {
     height: 400px;
 }
 
-/* 교과목명 */
+/* 수강 과목 리스트 */
 #subject .subject_b ul {
-    float: left;
+    display: flex;
 }
 
+/* 과목명 */
 #subject .subject_b li {
-    width: 270px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 0;
+    width: 250px;
+    height: 25px;
+    text-align: center;
     border-bottom: 1px solid rgb(220, 220, 220);
 }
 
-/* 담당 교수 */
-#subject .subject_b ul:nth-child(2) {
-    width: 200px;
-}
-
-#subject .subject_b ul:nth-child(2) li {
-    width: 200px;
+/* 교수 */
+#subject .subject_b li:nth-child(2) {
+    width: 180px;
 }
 
 /* 학점 */
-#subject .subject_b ul:nth-child(3) {
-    width: 100px;
-}
-
-#subject .subject_b ul:nth-child(3) li {
-    width: 100px;
+#subject .subject_b li:nth-child(3) {
+    width: 80px;
 }
 
 /* 전공/교양 */
-#subject .subject_b ul:nth-child(4) {
-    width: 120px;
-}
-
-#subject .subject_b ul:nth-child(4) li {
-    width: 120px;
+#subject .subject_b li:nth-child(4) {
+    width: 170px;
 }
 
 /* 설정 */
-#subject .subject_b ul:nth-child(5) {
-    margin-top: 34px;
-    width: 90px;
-}
-
-#subject .subject_b ul:nth-child(5) li {
-    width: 90px;
-}
-
-#subject .subject_b ul:nth-child(5) li h3 {
-    width: 60px;
-    color: #fff;
-    background-color: #000;
-    border-radius: 5px;
-}
-
-#subject .subject_b ul:nth-child(5) li h3:hover {
-    cursor: pointer;
-}
-
-#subject .subject_b li h3 {
-    text-align: center;
-    margin: 10px;
-    font-size: 18px;
+#subject .subject_b li:last-child {
+    width: 100px;
 }
 
 
@@ -318,9 +296,7 @@ header {
     height: 605px;
 }
 
-
-
-/* 이수 학점 */
+/* 이수 학점 박스 생성 */
 #credit {
     margin: 50px 30px;
     width: 425px;
@@ -329,6 +305,7 @@ header {
     box-shadow: 0 5px 10px -3px gray;
 }
 
+/* 이수 학점 내부 */
 #credit .credit_h {
     width: 425px;
     height: 80px;
@@ -341,37 +318,38 @@ header {
 
 /* 학점표 */
 #credit .credit_b {
-    margin-left: 30px;
+    margin: auto;
+    width: 330px;
+    height: 80px;
 }
 
 #credit .credit_b ul {
     float: left;
+    display: flex;
+    text-align: center;
 }
 
 #credit .credit_b li {
-    width: 120px;
+    width: 110px;
+    height: 30px;
+    padding: 5px 0;
     border-bottom: 1px solid rgb(220, 220, 220);
 }
 
-#credit .credit_b li h3 {
-    text-align: center;
-    margin: 5px;
-    font-size: 18px;
-}
 
 
-
-/* 시간표 */
+/* 시간표 박스 생성 */
 #timetable {
     margin: 50px 30px;
-    width: 424px;
+    width: 425px;
     height: 275px;
     border-radius: 20px;
     box-shadow: 0 5px 10px -3px gray;
 }
 
+/* 시간표 내부 */
 #timetable .timetable_h {
-    width: 424px;
+    width: 425px;
     height: 60px;
 }
 
@@ -380,80 +358,32 @@ header {
     margin: 30px 30px 0;
 }
 
+/* 시간표 */
 #timetable .timetable_b {
     margin: 20px auto;
-    width: 370px;
+    width: 350px;
     height: 160px;
 }
 
+/* 시간표 내부 */
 #timetable .timetable_b ul {
-    margin-right: 5px;
     float: left;
-    width: 40px;
+    width: 360px;
     text-align: center;
+    display: flex;
 }
 
-#timetable .timetable_b ul:last-child {
-    margin-right: 0;
-}
-
-/* 시간표 시간 */
 #timetable .timetable_b ul li {
-    margin-bottom: 7px;
+    margin-right: 5px;
+    margin-bottom: 5px;
     width: 60px;
+}
+
+#timetable .timetable_b ul li:last-child {
+    margin-right: 0px;
 }
 
 #timetable .timetable_b ul li p {
     font-size: 14px;
     font-weight: bold;
-}
-
-/* 월 */
-#timetable .timetable_b ul:nth-child(2) {
-    width: 60px;
-}
-
-#timetable .timetable_b ul:nth-child(2) li {
-    margin-bottom: 5px;
-    width: 70px;
-}
-
-/* 화 */
-#timetable .timetable_b ul:nth-child(3) {
-    width: 60px;
-}
-
-#timetable .timetable_b ul:nth-child(3) li {
-    margin-bottom: 5px;
-    width: 70px;
-}
-
-/* 수 */
-#timetable .timetable_b ul:nth-child(4) {
-    width: 60px;
-}
-
-#timetable .timetable_b ul:nth-child(4) li {
-    margin-bottom: 5px;
-    width: 70px;
-}
-
-/* 목 */
-#timetable .timetable_b ul:nth-child(5) {
-    width: 60px;
-}
-
-#timetable .timetable_b ul:nth-child(5) li {
-    margin-bottom: 5px;
-    width: 70px;
-}
-
-/* 금 */
-#timetable .timetable_b ul:nth-child(6) {
-    width: 60px;
-}
-
-#timetable .timetable_b ul:nth-child(6) li {
-    margin-bottom: 5px;
-    width: 60px;
 }
