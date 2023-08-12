@@ -43,6 +43,7 @@ header {
     width: 625px;
     height: 290px;
     position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -247,6 +248,7 @@ header {
     width: 625px;
     height: 600px;
     position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -343,6 +345,169 @@ header {
 /* 설정 */
 #subject .subject_b li:last-child {
     width: 90px;
+}
+
+/* 수강 과목 설정 버튼 */
+#setting_button {
+    width: 100px;
+    height: 60px;
+    position: absolute;
+    position: fixed;
+    top: 80%;
+    left: 55%;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px -3px gray;
+}
+
+#setting_button p {
+    line-height: 30px;
+}
+
+#setting_button p:hover {
+    cursor: pointer;
+    background-color: #f1f1f1;
+}
+
+#setting_button p:nth-child(1):hover {
+    height: 29px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+#setting_button p:nth-child(2):hover {
+    height: 29px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 1px solid rgb(220, 220, 220);
+}
+
+/* 수강 과목 제거 버튼 생성 */
+#delete_box {
+    width: 625px;
+    height: 290px;
+    position: absolute;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
+    display: none;
+}
+
+/* 수강 과목 제거 내부 */
+#delete_box .delete_box_text {
+    margin: 50px 60px;
+}
+
+#delete_box .delete_box_text h3, h2 {
+    margin-bottom: 10px;
+}
+
+#delete_box .delete_box_text p {
+    color: #bdbdbd;
+}
+
+/* 확인, 취소 버튼 */
+#delete_box .delete_box_check {
+    margin: auto;
+    width: 370px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#delete_box .delete_box_check p {
+    padding-top: 20px;
+    width: 170px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+#delete_box .delete_box_check p:hover {
+    cursor: pointer;
+}
+
+#delete_box .delete_box_check .ok {
+    color: #fff;
+    background-color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+/* 수강 과목 수정 박스 */
+#update_subject_box {
+    width: 625px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
+    display: none;
+}
+
+#update_subject_box .update_subject_box_text {
+    margin: 50px;
+}
+
+#update_subject_box .update_subject_box_text h3, h2 {
+    margin-bottom: 10px;
+}
+
+#update_subject_box .update_subject_box_text p {
+    color: #bdbdbd;
+}
+
+#update_subject_box .update_subject_box_text input {
+    padding: 10px;
+    margin-top: 30px;
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: #f1f1f1;
+}
+
+#update_subject_box .update_subject_box_check {
+    margin: auto;
+    width: 180px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#update_subject_box .update_subject_box_check p {
+    width: 80px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+#update_subject_box .update_subject_box_check p:hover {
+    cursor: pointer;
+}
+
+#update_subject_box .update_subject_box_check .update {
+    color: #fff;
+    background-color: #000;
 }
 
 

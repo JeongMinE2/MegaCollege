@@ -17,6 +17,25 @@ plus.addEventListener("click", function(e) {
     create_subject_box.style.display = "block";     // logout_box의 스타일을 none에서 block으로 변경
 })
 
+// 수정 버튼 클릭 시 이벤트 발생
+const update_button = document.getElementById("update_button");
+const update_subject_box = document.getElementById("update_subject_box");
+
+update_button.addEventListener("click", function(e) {
+    e.preventDefault();
+    update_subject_box.style.display = "block";       // update_subject_box의 스타일을 none에서 block으로 변경
+})
+
+// 제거 버튼 클릭 시 이벤트 발생
+const delete_button = document.getElementById("delete_button");
+const delete_box = document.getElementById("delete_box");
+
+delete_button.addEventListener("click", function(e) {
+    e.preventDefault();
+    delete_box.style.display = "block";
+})
+
+
 // 로그아웃 취소, 수강 과목 생성 취소 버튼 클릭 시 이벤트 발생
 let cancel = document.querySelectorAll(".cancel");
 
@@ -25,6 +44,8 @@ cancel.forEach((Element) => {
         e.preventDefault();
         logout_box.style.display = "none";
         create_subject_box.style.display = "none";
+        update_subject_box.style.display = "none";
+        delete_box.style.display = "none";
     })
 })
 
