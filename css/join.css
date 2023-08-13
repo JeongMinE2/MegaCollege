@@ -2,6 +2,8 @@ body {
   margin: auto;
   width: 1440px;
   height: 1020px;
+  display: flex;
+  align-items: center;
 }
 
 #join {
@@ -44,7 +46,6 @@ body {
   height: 35px;
   text-align: center;
   line-height: 35px;
-  color: #000;
   border-radius: 5px;
   border: 1px solid #000;
 }
@@ -53,7 +54,53 @@ body {
   cursor: pointer;
 }
 
-#join_check .create {
+#create {
   color: #fff;
   background-color: #000;
+}
+
+#join_check .cancel {
+  color: #000;
+}
+
+/* 회원가입 완료 */
+#join_completion_box {
+  width: 625px;
+  height: 290px;
+  position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
+  display: none;
+}
+
+#join_completion_box h1 {
+  margin: 30px 0 40px;
+  text-align: center;
+}
+
+#join_completion_box p {
+  margin: 30px 0 60px;
+  text-align: center;
+  font-size: 25px;
+}
+
+#join_completion_box .check {
+  margin: auto;
+  padding-top: 15px;
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #000;
+}
+
+#join_completion_box .check:hover {
+  cursor: pointer;
 }

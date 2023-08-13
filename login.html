@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>로그인 페이지</title>
   <link rel="stylesheet" href="css/login.css">
+  <script defer src="js/login.js"></script>
 </head>
 <style>
   * {
@@ -34,9 +35,14 @@
     <input type="text" placeholder="아이디">
     <input type="text" placeholder="비밀번호">
     <div id="login_page_text">
-        <p class="login">로그인</p>
-        <p class="join">회원가입</p>
+      <p id="login">로그인</p>
+      <p class="join">회원가입</p>
     </div>
-</div>
+  </div>
+  <div id="login_false_box">
+    <h1>알림</h1>
+    <p>입력한 비밀번호가 일치하지 않습니다.</p>
+    <p class="check">확인</p>
+  </div>
 </body>
 </html>

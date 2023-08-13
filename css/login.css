@@ -2,6 +2,8 @@ body {
   margin: auto;
   width: 1440px;
   height: 1020px;
+  display: flex;
+  align-items: center;
 }
 
 #login_page {
@@ -38,11 +40,57 @@ body {
   border: 1px solid #000;
 }
 
+#login_page_text p:hover {
+  cursor: pointer;
+}
+
 #login_page_text p:nth-child(1) {
   margin-top: 40px;
 }
 
-#login_page_text .login {
+#login {
   color: #fff;
   background-color: #000;
+}
+
+/* 비밀번호 불일치 */
+#login_false_box {
+  width: 625px;
+  height: 290px;
+  position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow : rgba(0,0,0,0.5) 0 0 0 9999px;
+  display: none;
+}
+
+#login_false_box h1 {
+  margin: 30px 0 40px;
+  text-align: center;
+}
+
+#login_false_box p {
+  margin: 30px 0 60px;
+  text-align: center;
+  font-size: 25px;
+}
+
+#login_false_box .check {
+  margin: auto;
+  padding-top: 15px;
+  width: 150px;
+  height: 35px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #000;
+}
+
+#login_false_box .check:hover {
+  cursor: pointer;
 }

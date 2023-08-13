@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>회원가입 페이지</title>
   <link rel="stylesheet" href="css/join.css">
+  <script defer src="js/join.js"></script>
 </head>
 <style>
   * {
@@ -40,9 +41,14 @@
     <input type="text" placeholder="생년월일">
     <input type="text" placeholder="주소">
     <div id="join_check">
-      <p class="create">생성</p>
+      <p id="create">생성</p>
       <p class="cancel">취소</p>
     </div>
+  </div>
+  <div id="join_completion_box">
+    <h1>알림</h1>
+    <p>회원 가입 완료하였습니다.</p>
+    <p class="check">확인</p>
   </div>
 </body>
 </html>
