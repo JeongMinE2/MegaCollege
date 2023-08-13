@@ -17,6 +17,25 @@ plus.addEventListener("click", function(e) {
     create_subject_box.style.display = "block";     // logout_box의 스타일을 none에서 block으로 변경
 })
 
+// 수강 과목 생성에서 생성 버튼 클릭 시 이벤트 발생
+const create = document.getElementById("create");                           // 생성 버튼
+const subject_container = document.getElementById('subject_container');     // 생성 버튼 클릭 시 ul이 추가될 div
+const Ul = subject_container.querySelector('.data');                        // data 클래스 가져오기
+
+create.addEventListener("click", function(e) {
+    e.preventDefault();
+    const newUl = document.createElement('ul');         // 새로운 ul 태그 생성
+    newUl.className = 'data';                           // 새로 생긴 ul 태그는 data 클래스
+    const newLi = Ul.cloneNode(true);                   // Ul(data) 노드 복사, true라서 하위 노드까지 모두 복사
+    create_subject_box.style.display = "none";
+    subject_container.appendChild(newUl);               // subject_container div에 새로운 ul 태그 추가
+    newUl.appendChild(newLi);                           // 새로 추가된 ul에 복제된 노드 추가
+})
+
+
+// 설정 버튼 클릭 시 이벤트 발생
+
+
 // 수정 버튼 클릭 시 이벤트 발생
 const update_button = document.getElementById("update_button");
 const update_subject_box = document.getElementById("update_subject_box");

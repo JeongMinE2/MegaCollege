@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MegaCollege</title>
     <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/index.js"></script>
 </head>
 <style>
     * {
@@ -27,7 +28,6 @@
         list-style-type: none;
     }
 </style>
-<script defer src="js/index.js"></script>
 <body>
     <!-- 헤더 -->
     <header>
@@ -111,21 +111,26 @@
                         <input type="text" placeholder="전공 / 교양">
                     </div>
                     <div class="create_subject_box_check">
-                        <p class="create">생성</p>
+                        <p id="create">생성</p>
                         <p class="cancel">취소</p>
                     </div>
                 </div>
 
-                <div class="subject_b">
-                    <ul>
+                <div id="subject_container">
+                    <ul class="subject_list">
                         <li>교과목명</li>
                         <li>담당교수</li>
                         <li>학점</li>
                         <li>전공/교양</li>
                         <li></li>
                     </ul>
-                    <ul id="data">
+                    <ul class="data">
                         <!-- 수강 과목 데이터 들어갈 곳 -->
+                        <li class="list"></li>
+                        <li class="list"></li>
+                        <li class="list"></li>
+                        <li class="list"></li>
+                        <li class="list"><button id="setting">설정</button></li>
                     </ul>
                 </div>
 
@@ -135,19 +140,6 @@
                     <p id="delete_button">제거</p>
                 </div>
             </section>
-        </div>
-
-        <!-- 수강 과목 제거 버튼 -->
-        <div id="delete_box">
-            <div class="delete_box_text">
-                <h3>메가대학교</h3>
-                <h2>수강 과목 제거</h2>
-                <p>수강 과목 정보를 제거하시겠습니까?</p>
-            </div>
-            <div class="delete_box_check">
-                <p class="ok">확인</p>
-                <p class="cancel">취소</p>
-            </div>
         </div>
 
         <!-- 수강 과목 수정 박스 -->
@@ -163,6 +155,19 @@
             </div>
             <div class="update_subject_box_check">
                 <p class="update">수정</p>
+                <p class="cancel">취소</p>
+            </div>
+        </div>
+        
+        <!-- 수강 과목 제거 버튼 -->
+        <div id="delete_box">
+            <div class="delete_box_text">
+                <h3>메가대학교</h3>
+                <h2>수강 과목 제거</h2>
+                <p>수강 과목 정보를 제거하시겠습니까?</p>
+            </div>
+            <div class="delete_box_check">
+                <p class="ok">확인</p>
                 <p class="cancel">취소</p>
             </div>
         </div>

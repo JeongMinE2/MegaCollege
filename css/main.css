@@ -301,24 +301,24 @@ header {
     cursor: pointer;
 }
 
-#create_subject_box .create_subject_box_check .create {
+#create {
     color: #fff;
     background-color: #000;
 }
 
 /* 수강 과목 리스트 */
-#subject .subject_b {
+#subject_container {
     margin: auto;
     width: 780px;
     height: 400px;
 }
 
-#subject .subject_b ul {
+#subject_container ul {
     display: flex;
 }
 
 /* 과목명 */
-#subject .subject_b li {
+#subject_container li {
     font-size: 18px;
     width: 250px;
     height: 35px;
@@ -328,37 +328,51 @@ header {
 }
 
 /* 교수 */
-#subject .subject_b li:nth-child(2) {
+#subject_container li:nth-child(2) {
     width: 180px;
 }
 
 /* 학점 */
-#subject .subject_b li:nth-child(3) {
+#subject_container li:nth-child(3) {
     width: 80px;
 }
 
 /* 전공/교양 */
-#subject .subject_b li:nth-child(4) {
-    width: 180px;
+#subject_container li:nth-child(4) {
+    width: 170px;
 }
 
 /* 설정 */
-#subject .subject_b li:last-child {
-    width: 90px;
+#subject_container li:last-child {
+    width: 100px;
 }
 
-/* 수강 과목 설정 버튼 */
+/* 설정 버튼 */
+#setting {
+    padding: 2px 20px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #000;
+}
+
+#subject_container ul li button:hover {
+    cursor: pointer;
+}
+
+/* 수강 과목 설정 버튼 클릭 시 */
 #setting_button {
     width: 100px;
     height: 60px;
     position: absolute;
     position: fixed;
-    top: 80%;
-    left: 55%;
+    top: 58%;
+    left: 57%;
     text-align: center;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 5px 10px -3px gray;
+    /* display: none; */
 }
 
 #setting_button p {
