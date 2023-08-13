@@ -6,7 +6,7 @@ logout.addEventListener("click", function(e) {
     e.preventDefault();     // 기본 동작을 실행하지 않도록 지정
     logout_box.style.display = "block";     // logout_box의 스타일을 none에서 block으로 변경
     
-})
+});
 
 // 수강 과목 + 버튼 클릭 시 이벤트 발생
 const plus = document.getElementById("plus");
@@ -15,7 +15,7 @@ const create_subject_box = document.getElementById("create_subject_box");
 plus.addEventListener("click", function(e) {
     e.preventDefault();
     create_subject_box.style.display = "block";     // logout_box의 스타일을 none에서 block으로 변경
-})
+});
 
 // 수강 과목 생성에서 생성 버튼 클릭 시 이벤트 발생
 const create = document.getElementById("create");                           // 생성 버튼
@@ -30,10 +30,34 @@ create.addEventListener("click", function(e) {
     create_subject_box.style.display = "none";
     subject_container.appendChild(newUl);               // subject_container div에 새로운 ul 태그 추가
     newUl.appendChild(newLi);                           // 새로 추가된 ul에 복제된 노드 추가
-})
+});
 
 
 // 설정 버튼 클릭 시 이벤트 발생
+const setting = document.getElementById("setting");
+const setting_button = document.getElementById("setting_button");
+
+setting.addEventListener("click", function(e) {
+    const clickX = e.clientX;
+    const clickY = e.clientY;
+
+    setting_button.style.left = clickX + "px";
+    setting_button.style.top = clickY + "px";
+    setting_button.style.display = "block";
+});
+
+setting_button.addEventListener("click", function(e) {
+    e.stopPropagation();
+    setting_button.style.display = "none";
+});
+
+// 설정 버튼이랑 설정 버튼 클릭 시 나오는 레이어 아닌 부분 클릭 시 설정 레이어 사라지는 이벤트
+document.addEventListener("click", function(e) {
+    if(e.target !== setting && e.target !== setting_button) {
+        setting_button.style.display = "none";
+    }
+})
+
 
 
 // 수정 버튼 클릭 시 이벤트 발생
@@ -43,7 +67,7 @@ const update_subject_box = document.getElementById("update_subject_box");
 update_button.addEventListener("click", function(e) {
     e.preventDefault();
     update_subject_box.style.display = "block";       // update_subject_box의 스타일을 none에서 block으로 변경
-})
+});
 
 // 제거 버튼 클릭 시 이벤트 발생
 const delete_button = document.getElementById("delete_button");
@@ -52,7 +76,7 @@ const delete_box = document.getElementById("delete_box");
 delete_button.addEventListener("click", function(e) {
     e.preventDefault();
     delete_box.style.display = "block";
-})
+});
 
 
 // 로그아웃 취소, 수강 과목 생성 취소 버튼 클릭 시 이벤트 발생
@@ -65,8 +89,8 @@ cancel.forEach((Element) => {
         create_subject_box.style.display = "none";
         update_subject_box.style.display = "none";
         delete_box.style.display = "none";
-    })
-})
+    });
+});
 
 
 // 수강 과목

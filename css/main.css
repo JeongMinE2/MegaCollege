@@ -365,14 +365,11 @@ header {
     width: 100px;
     height: 60px;
     position: absolute;
-    position: fixed;
-    top: 58%;
-    left: 57%;
     text-align: center;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 5px 10px -3px gray;
-    /* display: none; */
+    display: none;
 }
 
 #setting_button p {
