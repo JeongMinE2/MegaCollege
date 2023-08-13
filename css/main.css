@@ -348,7 +348,7 @@ header {
 }
 
 /* 설정 버튼 */
-#setting {
+.setting {
     padding: 2px 20px;
     font-size: 18px;
     color: #fff;
@@ -361,7 +361,7 @@ header {
 }
 
 /* 수강 과목 설정 버튼 클릭 시 */
-#setting_button {
+.setting_button {
     width: 100px;
     height: 60px;
     position: absolute;
@@ -372,23 +372,23 @@ header {
     display: none;
 }
 
-#setting_button p {
+.setting_button p {
     line-height: 30px;
 }
 
-#setting_button p:hover {
+.setting_button p:hover {
     cursor: pointer;
     background-color: #f1f1f1;
 }
 
-#setting_button p:nth-child(1):hover {
+.setting_button p:nth-child(1):hover {
     height: 29px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom: 1px solid rgb(220, 220, 220);
 }
 
-#setting_button p:nth-child(2):hover {
+.setting_button p:nth-child(2):hover {
     height: 29px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;

@@ -30,12 +30,31 @@ create.addEventListener("click", function(e) {
     create_subject_box.style.display = "none";
     subject_container.appendChild(newUl);               // subject_container div에 새로운 ul 태그 추가
     newUl.appendChild(newLi);                           // 새로 추가된 ul에 복제된 노드 추가
+
+    newUl.addEventListener("click", function(e) {
+        const clickX = e.clientX;
+        const clickY = e.clientY;
+
+        setting_button.style.left = clickX + "px";
+        setting_button.style.top = clickY + "px";
+        setting_button.style.display = "block";
+    })
+
+    newLi.addEventListener("click", function(e) {
+        e.stopPropagation();
+    })
+
+    document.addEventListener("click", function(e) {
+        if(e.target !== setting && e.target !== setting_button) {
+            setting_button.style.display = "none";
+        }
+    })
 });
 
 
-// 설정 버튼 클릭 시 이벤트 발생
-const setting = document.getElementById("setting");
-const setting_button = document.getElementById("setting_button");
+// 수강 과목 설정 버튼 클릭 시 이벤트 발생
+const setting = document.querySelector(".setting");
+const setting_button = document.querySelector(".setting_button");
 
 setting.addEventListener("click", function(e) {
     const clickX = e.clientX;
@@ -51,7 +70,7 @@ setting_button.addEventListener("click", function(e) {
     setting_button.style.display = "none";
 });
 
-// 설정 버튼이랑 설정 버튼 클릭 시 나오는 레이어 아닌 부분 클릭 시 설정 레이어 사라지는 이벤트
+// // 설정 버튼이랑 설정 버튼 클릭 시 나오는 레이어 아닌 부분 클릭 시 설정 레이어 사라지는 이벤트
 document.addEventListener("click", function(e) {
     if(e.target !== setting && e.target !== setting_button) {
         setting_button.style.display = "none";
@@ -59,9 +78,8 @@ document.addEventListener("click", function(e) {
 })
 
 
-
 // 수정 버튼 클릭 시 이벤트 발생
-const update_button = document.getElementById("update_button");
+const update_button = document.querySelector(".update_button");
 const update_subject_box = document.getElementById("update_subject_box");
 
 update_button.addEventListener("click", function(e) {
@@ -70,7 +88,7 @@ update_button.addEventListener("click", function(e) {
 });
 
 // 제거 버튼 클릭 시 이벤트 발생
-const delete_button = document.getElementById("delete_button");
+const delete_button = document.querySelector(".delete_button");
 const delete_box = document.getElementById("delete_box");
 
 delete_button.addEventListener("click", function(e) {

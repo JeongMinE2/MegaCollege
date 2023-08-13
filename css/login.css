@@ -30,27 +30,38 @@ body {
   background-color: #f1f1f1;
 }
 
-#login_page_text p {
-  margin: 10px auto;
+#login_page_text {
+  margin: auto;
+  width: 470px;
+  height: 150px;
+}
+
+#login_page_text button {
+  margin-top: 20px;
   width: 470px;
   height: 50px;
+  font-size: 15px;
   text-align: center;
   line-height: 50px;
   border-radius: 10px;
   border: 1px solid #000;
 }
 
-#login_page_text p:hover {
+#login_page_text button:hover {
   cursor: pointer;
 }
 
-#login_page_text p:nth-child(1) {
+#login_page_text button:nth-child(1) {
   margin-top: 40px;
 }
 
-#login {
+#login_page_text .login {
   color: #fff;
   background-color: #000;
+}
+
+#login_page_text .join {
+  background-color: #fff;
 }
 
 /* 비밀번호 불일치 */
