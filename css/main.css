@@ -301,7 +301,7 @@ header {
     cursor: pointer;
 }
 
-#create {
+#create_subject_box .create_subject_box_check .create {
     color: #fff;
     background-color: #000;
 }
