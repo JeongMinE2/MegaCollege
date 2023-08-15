@@ -1,3 +1,16 @@
+// 로그아웃 취소, 수강 과목 생성 취소 버튼 클릭 시 이벤트 발생
+let cancel = document.querySelectorAll(".cancel");
+
+cancel.forEach((Element) => {
+    Element.addEventListener("click", function(e) {
+        e.preventDefault();
+        logout_box.style.display = "none";
+        create_subject_box.style.display = "none";
+        update_subject_box.style.display = "none";
+        delete_box.style.display = "none";
+    });
+});
+
 // 수강 과목
 const subjectData = {
     "data" : [
@@ -92,11 +105,7 @@ create.addEventListener("click", function(e) {
 const setting = document.querySelectorAll(".setting");
 const setting_button = document.querySelector(".setting_button");
 
-for(let i = 0; i < setting.length; i++) {
-        setting.addEventListener("click", function(e) {
-        
-        })
-    }
+
 
 // setting.addEventListener("click", function(e) {
 //     const clickX = e.clientX;
@@ -139,15 +148,64 @@ delete_button.addEventListener("click", function(e) {
 });
 
 
-// 로그아웃 취소, 수강 과목 생성 취소 버튼 클릭 시 이벤트 발생
-let cancel = document.querySelectorAll(".cancel");
+// 이수 학점 넣기
+const scoreData = {
+    "data" : {
+        "totalCredits" : 60,
+        "majorCredit" : 24,
+        "liberalArtsCredit" : 36
+    }
+}
 
-cancel.forEach((Element) => {
-    Element.addEventListener("click", function(e) {
-        e.preventDefault();
-        logout_box.style.display = "none";
-        create_subject_box.style.display = "none";
-        update_subject_box.style.display = "none";
-        delete_box.style.display = "none";
-    });
-});
+function create_score() {
+    let scoreList =
+    `
+    <li><h4>${scoreData.data.totalCredits} / 120</h4></li>
+    <li><h4>${scoreData.data.majorCredit} / 80</h4></li>
+    <li><h4>${scoreData.data.liberalArtsCredit} / 40</h4></li>
+    `
+    document.getElementById("score").innerHTML = scoreList;
+}
+create_score();
+
+
+// 시간표 넣기
+const timetable = {
+    "data" : {
+        "monday" : {
+            "1":"영양갱 경제학",
+            "2":"피카츄 백만볼트",
+            "3":"",
+            "4":"침팬치의 하루",
+            "5":""
+        },
+        "tuesday" : {
+            "1":"",
+            "2":"피카츄 백만볼트",
+            "3":"",
+            "4":"침팬치의 하루",
+            "5":"알파메일의 삶"
+        },
+        "wednesday" : {
+            "1":"영양갱 경제학",
+            "2":"",
+            "3":"",
+            "4":"",
+            "5":"부팀장이란 무엇인가"
+        },
+        "thursday" : {
+            "1":"부팀장이란 무엇인가",
+            "2":"피카츄 백만볼트",
+            "3":"알파메일의 삶",
+            "4":"",
+            "5":""
+        },
+        "friday" : {
+            "1":"",
+            "2":"",
+            "3":"",
+            "4":"",
+            "5":""
+        }
+    }
+}
