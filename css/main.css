@@ -589,26 +589,24 @@ header {
     margin: 20px auto;
     width: 350px;
     height: 160px;
+    text-align: center;
 }
 
 /* 시간표 내부 */
-#timetable .timetable_b ul {
+#timetable .timetable_b .weeks > ul {
     float: left;
     width: 360px;
-    text-align: center;
     display: flex;
-    background-color: aquamarine;
 }
 
-#timetable .timetable_b .number {
-    display: inline;
+#timetable .timetable_b .weeks li {
+    text-overflow: ellipsis;
 }
 
 #timetable .timetable_b ul li {
     margin-right: 5px;
     margin-bottom: 5px;
     width: 55px;
-    background-color: antiquewhite;
 }
 
 #timetable .timetable_b ul li:last-child {
@@ -616,5 +614,5 @@ header {
 }
 
 #timetable .timetable_b ul li p {
-    font-size: 14px;
+    font-size: 13px;
 }

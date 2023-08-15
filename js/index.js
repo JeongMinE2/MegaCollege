@@ -209,3 +209,20 @@ const timetable = {
         }
     }
 }
+
+const times = document.querySelector("#times");
+
+function create_timeTable() {
+    let html = ``;
+    for(let value in timetable.data) {
+        html += `<ul>`
+        console.log(value)
+        for(let i in timetable.data[value]){
+            console.log(timetable.data[value][i])
+        html += `<li><p>${timetable.data[value][i]}</p></li>`
+        }
+        html += `</ul>`;
+    }
+    times.innerHTML = html;
+}
+create_timeTable();
